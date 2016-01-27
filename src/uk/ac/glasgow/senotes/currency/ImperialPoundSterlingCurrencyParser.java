@@ -23,13 +23,19 @@ public class ImperialPoundSterlingCurrencyParser implements CurrencyParser {
 		
 		//4. Parse out each of the amounts for pounds shillings
 		//   pence from the scanner.
-		Integer c = sc.nextInt();
+		Currency pound = new ImperialPound(sc.nextInt());
+		Currency shilling = new ImperialShilling(sc.nextInt());
+		Currency d = new ImperialPenny(sc.nextInt());
 		
 		//5. Add 3 new currency objects to the result list for
 		//   the parsed amounts.
+		currencyList.add(pound);
+		currencyList.add(shilling);
+		currencyList.add(d);
 		
+		sc.close();
 		//6. Return the result.
-		return null;
+		return currencyList;
 	}
 
 }
