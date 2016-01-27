@@ -30,9 +30,25 @@ public class ImperialPoundSterlingCurrencyParserTest {
 	
 	}
 	
-	public void testConvertCurrency(){
-		//test cc.addCurrency();
-		//test cc.dispose()
+	public void testAddCurrency(){
+		
+		//test cc.addCurrency(something)
+		//see if something is in the list
+		//the currencyList should have 'something' in the list
+		
+		//assertEquals(something, cc.getCurrencyList(0));
+		
+		
+	}
+	public void testDispose(){
+		//dispense is a method to turn your old money into new money
+		//it takes in old currency, turn them all into pennies
+		//convert into new currency, clear the currencyList
+		//then add new one in
+				
+		//test cc.dispose(old)
+		//check if the result is the same as expected
+		//assertEquals(new, cc.dispose(old))
 	}
 
 }
