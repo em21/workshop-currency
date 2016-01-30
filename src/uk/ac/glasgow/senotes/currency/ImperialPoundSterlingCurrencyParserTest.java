@@ -30,7 +30,7 @@ public class ImperialPoundSterlingCurrencyParserTest {
 		assertEquals(4, currency.get(2).amount);
 	
 	}
-	
+	@Test
 	public void testAddCurrency(){
 		
 		List<Currency> currency = new ArrayList<>();
@@ -50,6 +50,7 @@ public class ImperialPoundSterlingCurrencyParserTest {
 		assertEquals(4, currency.get(2));
 		
 	}
+	@Test
 	public void testDispense(){
 		//dispense is a method to turn your old money into new money
 		List<Currency> convertedCurrency = new ArrayList<>();
