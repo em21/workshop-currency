@@ -13,6 +13,7 @@ public class ImperialToDecimalCurrencyConverter implements CurrencyConverter{
 	 * to the converter. 
 	 * @param c
 	 */
+	
 	@Override
 	public void addCurrency(Currency c) {
 		//1. Add the currency to the list of currencies stored in
@@ -61,5 +62,4 @@ public class ImperialToDecimalCurrencyConverter implements CurrencyConverter{
 		//9. Return the result.
 		return convertedCurrency;
 	}
-
 }

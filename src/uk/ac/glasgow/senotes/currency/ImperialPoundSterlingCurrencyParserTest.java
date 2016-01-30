@@ -32,26 +32,25 @@ public class ImperialPoundSterlingCurrencyParserTest {
 	}
 	@Test
 	public void testAddCurrency(){
-		
-		List<Currency> currency = new ArrayList<>();
-		Currency pound = new ImperialPound(2);
-		Currency shilling = new ImperialShilling(1);
-		Currency d = new ImperialPenny(4);
-		
+		//add "£2.1s.4d." into currency list
+		List<Currency> currency = cp.parseCurrency("£2.1s.4d.");
+	
 		//test addCurrency
-		cc.addCurrency(pound);
-		cc.addCurrency(shilling);
-		cc.addCurrency(d);
+		cc.addCurrency(new ImperialPound(2));
+		cc.addCurrency(new ImperialShilling(1));
+		cc.addCurrency(new ImperialPenny(4));
 		
-		//see if something is in the list
-		//the currencyList should have 'something' in the list
-		assertEquals(2, currency.get(0));
-		assertEquals(1, currency.get(1));
-		assertEquals(4, currency.get(2));
+		//see if "£2.1s.4d." is in the list
+		assertEquals(2, currency.get(0).amount);
+		assertEquals(1, currency.get(1).amount);
+		assertEquals(4, currency.get(2).amount);
 		
 	}
 	@Test
 	public void testDispense(){
+		//parse the string as currency
+		//List<Currency> currency = cp.parseCurrency("£2.1s.4d.");
+		
 		//dispense is a method to turn your old money into new money
 		List<Currency> convertedCurrency = new ArrayList<>();
 		
@@ -70,8 +69,8 @@ public class ImperialPoundSterlingCurrencyParserTest {
 		convertedCurrency = cc.dispense();		
 
 		//check if the result is the same as expected
-		assertEquals(2, convertedCurrency.get(0));
-		assertEquals(6, convertedCurrency.get(1));
+		assertEquals(2, convertedCurrency.get(0).amount);
+		assertEquals(6, convertedCurrency.get(1).amount);
 
 	}
 
