@@ -34,11 +34,6 @@ public class ImperialPoundSterlingCurrencyParserTest {
 	public void testAddCurrency(){
 		//add "£2.1s.4d." into currency list
 		List<Currency> currency = cp.parseCurrency("£2.1s.4d.");
-	
-		//test addCurrency
-		cc.addCurrency(new ImperialPound(2));
-		cc.addCurrency(new ImperialShilling(1));
-		cc.addCurrency(new ImperialPenny(4));
 		
 		//see if "£2.1s.4d." is in the list
 		assertEquals(2, currency.get(0).amount);
