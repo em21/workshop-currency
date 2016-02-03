@@ -34,6 +34,7 @@ public class ImperialPoundSterlingCurrencyParserTest {
 	@Test
 	//trying to get the reference to CurrencyConverter's list of currency
 	public void testAddCurrency(){
+<<<<<<< HEAD
 		//create a new list of currency
 		List<Currency> currency = new ArrayList<Currency>();
 		
@@ -46,6 +47,12 @@ public class ImperialPoundSterlingCurrencyParserTest {
 		//check the addCurrency method. It does the add properly (see dispense below as proof) 
 		//it would be nice if we can refer the currency below with the actual CurrencyConverter's list
 		//This however refer to the currency list created above, so its an empty list therefore error
+=======
+		//add "£2.1s.4d." into currency list
+		List<Currency> currency = cp.parseCurrency("£2.1s.4d.");
+		
+		//see if "£2.1s.4d." is in the list
+>>>>>>> af437d222c2cbe449cdfc42abfac2abd496f76a9
 		assertEquals(2, currency.get(0).amount);
 		assertEquals(1, currency.get(1).amount);
 		assertEquals(4, currency.get(2).amount);
