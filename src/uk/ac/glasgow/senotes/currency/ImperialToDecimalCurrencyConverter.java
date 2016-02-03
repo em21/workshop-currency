@@ -7,7 +7,7 @@ import java.util.List;
 public class ImperialToDecimalCurrencyConverter implements CurrencyConverter{
 	
 	//declare a new field to hold a list of Currency objects here.
-	private static List<Currency> currency = new ArrayList<>();
+	private List<Currency> currency = new ArrayList<Currency>();
 	/**
 	 * Adds an element of imperial currency (pounds, shilling or pence)
 	 * to the converter. 
